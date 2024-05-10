@@ -1,0 +1,52 @@
+<html>
+<head><title> How to figure your wage, after taxes. </title>
+</head>
+<body>
+<h1> How to figure your wage, after taxes. </h1>
+<script language="javascript" type"text/javascript">
+function wage1 (hours, wage){return (hours*wage);};
+function wagefedtax (grosswage, fedtax) {return (grosswage*fedtax);};
+function wagestatetax (grosswage, statetax) {return (grosswage*statetax);};
+function finalwage (a, b, c) {return ((a-b)-c);};
+</script>
+<Ol>
+<form name="hourlywage">
+<li> First enter your hourly wage (how much you get paid per hour).
+</li>
+<input type="text" name="wage" size="10"><br/>
+<li> Next enter the number of hours that you work per week, not counting overtime.
+</li>
+<input type=text" name="hours" size="10"
+onChange='document.hourlywage.result1.value=wage1
+(document.hourlywage.wage.value*1,document.hourlywage.hours.value*1)'><br/>
+<li>Click on the next box to find your gross weekly wage (wage before taxes). </li>
+<input type="text" name="result1" size="10"><br/>
+<li> Next, type your gross wage into the following box.</li>
+<input type="text" name="gross" size="10" ><br/>
+<li> Then type your rate of federal tax, in decimal form, in the next box.
+<input type=text" name="fedtax" size="10"
+onChange='document.hourlywage.result2.value=wagefedtax
+(document.hourlywage.gross.value*1,document.hourlywage.fedtax.value*1)'>
+<li>Click on the next box to find your fed tax owed at the given rate of your federal tax</li>
+<input type="test" name="result2" size="10"><br/>
+<li> Next, again type your gross wage into the following box.</li>
+<input type="text" name="gross2" size="10" ><br/>
+<li> Then type your rate of state tax, in decimal form, in the next box.
+
+<input type=text" name="statetax" size="10"
+onChange='document.hourlywage.result3.value=wagestatetax
+(document.hourlywage.gross2.value*1,document.hourlywage.statetax.value*1)'>
+<li>Click on the next box to find your state tax owed at the given rate of your state tax</li>
+
+<input type="text" name="result3" size="10"><br/>
+<li> Next, again type your gross wage into the following box.</li>
+<input type="text" name="gross3" size="10"
+onChange='document.hourlywage.result4.value=finalwage
+(document.hourlywage.gross3.value, document.hourlywage.result3.value, document.hourlywage.result2.value)'><br/>
+<li>Click on the last box to view your <b>final wage after taxes</b></li>
+<input type="test" name="result4" size="10">
+<li>Now your done, so stop.</li>
+</form>
+</ol>
+
+</body>
